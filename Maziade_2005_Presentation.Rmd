@@ -2,11 +2,11 @@
 title: "Shared and Specific Susceptibility Loci for Schizophrenia and Bipolar Disorder"
 subtitle: "A Dense Genome Scan in Eastern Quebec Families"
 author: "Maziade et al., Molecular Psychiatry (2005)"
-date: "P8139 Statistical Genetic Modeling"
+date: "Samantha Xinwei Han, Yongyan Liu"
 output:
   beamer_presentation:
-    theme: "Madrid"
-    colortheme: "default"
+    theme: "AnnArbor"
+    colortheme: "dolphin"
     fonttheme: "structurebold"
     slide_level: 2
     toc: false
@@ -15,6 +15,20 @@ header-includes:
   - \usepackage{graphicx}
   - \setbeamertemplate{navigation symbols}{}
   - \setbeamertemplate{footline}[frame number]
+  - |
+    \setbeamertemplate{headline}{
+      \leavevmode
+      \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,center]{section in head/foot}
+        \insertsectionnavigationhorizontal{\paperwidth}{\hfil}{\hfil}
+      \end{beamercolorbox}
+    }
+  - |
+    \setbeamertemplate{section page}{
+      \centering
+      \begin{beamercolorbox}[sep=12pt,center]{part title}
+        \usebeamerfont{section title}\insertsection\par
+      \end{beamercolorbox}
+    }
 ---
 
 ```{r setup, include=FALSE}
@@ -25,22 +39,22 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 ## Study Objective
 
-**Primary Goal:** Identify susceptibility loci for schizophrenia (SZ) and bipolar disorder (BP)
+**Primary Goal:** Identify shared and disorder-specific susceptibility loci for schizophrenia (SZ) and bipolar disorder (BP)
 
 \vspace{0.3cm}
 
 **Key Questions:**
 
--   Are there genetic loci **shared** by both SZ and BP?
+-   Do SZ and BP **share** common genetic susceptibility loci?
 -   Are there loci **specific** to each disorder?
 
 \vspace{0.3cm}
 
-**Why study both disorders together?**
+**Why study SZ and BP together?**
 
--   Family studies show SZ and BP tend to co-aggregate in families
--   Previous genome scans studied them separately
--   Studying both concurrently avoids diagnostic bias
+-   Family studies show co-aggregation of SZ and BP within pedigrees
+-   Previous linkage studies analyzed the disorders separately
+-   Separate analysis may cause diagnostic misclassification to break segregation patterns within pedigrees
 
 ## Background: The Diseases
 
@@ -175,7 +189,7 @@ do we need to talk about actual genotypying - PCR etc
 **Three diagnostic classes analyzed:**
 
 | Phenotype | Narrow Definition | Broad Definition |
-|-------------------|----------------------------|--------------------------|
+|----|----|----|
 | **SZ** | SZ only (N=71) | SZ + schizophreniform + schizotypal (N=81) |
 | **BP** | BP I only (N=48) | BP I + BP II + recurrent depression (N=72) |
 | **CL** | SZ + BP I + schizoaffective (N=134) | CL narrow + depression + schizotypal (N=169) |
@@ -218,7 +232,7 @@ $$LOD(\theta) = \log_{10} \frac{L(\theta)}{L(\theta = 0.5)} = \log_{10} \frac{\t
 
 \vspace{0.3cm}
 
-**When penetrance $f < 1$ or phenocopy rate $f_0 > 0$, the likelihood:**
+**When penetrance** $f < 1$ or phenocopy rate $f_0 > 0$, the likelihood:
 
 $$L(\theta) = \sum_{\text{genotypes}} P(\text{phenotypes} | \text{genotypes}, f, f_0) \cdot P(\text{genotypes} | \theta)$$
 
