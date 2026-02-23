@@ -77,12 +77,12 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ## **Complex Genetic Disorders**
 
 -   Non-Mendelian inheritance with incomplete penetrance
-    -   carrying a susceptibility allele does not guarantee disease expression
+    -   Carrying a susceptibility allele does not guarantee disease expression
 -   Genetic heterogeneity
-    -   similar clinical phenotypes may result from different susceptibility loci or mutations across families
+    -   Similar clinical phenotypes may result from different susceptibility loci or mutations across families
 -   Phenocopies
-    -   similar clinical phenotype induced by enviromental factors
-    -   eg., prenatal or perinatal adversities including stress, infection, or other medical complications
+    -   Similar clinical phenotype induced by enviromental factors
+    -   Eg., prenatal or perinatal adversities including stress, infection, or other medical complications
 -   Other risk factors: neurodevelopmental factors, substance exposure, psychosocial stressors, etc.
 
 ## Study Population: Eastern Quebec Families
@@ -173,14 +173,14 @@ Step 6: Identify candidate susceptibility regions
 
 | Phenotype | Narrow Definition | Broad Definition |
 |-------------------|---------------------------|--------------------------|
-| **SZ** | SZ only (N=71) | SZ + schizophreniform + schizotypal (N=81) |
-| **BP** | BP I only (N=48) | BP I + BP II + recurrent depression (N=72) |
-| **CL** | SZ + BP I + schizoaffective (N=134) | CL narrow + depression + schizotypal (N=169) |
+| **SZ** | SZ only (N=71) | SZ+schizophreniform+ schizotypal (N=81) |
+| **BP** | BP I only (N=48) | BP I+BP II+recurrent depression (N=72) |
+| **CL** | SZ + BP I + schizoaffective (N=134) | CL narrow+depression +schizotypal (N=169) |
 
 **CL = "Common Locus" phenotype**
 
--   Tests hypothesis that some loci are shared by both disorders
 -   Combines SZ and BP phenotypes
+-   Tests hypothesis that some loci are shared by both disorders
 
 **Diagnostic blindness**: ensures that clinical diagnosis is assigned independently of family structure
 
@@ -200,11 +200,9 @@ Step 6: Identify candidate susceptibility regions
 | Penetrance (high age)    | 0.70           | 0.70            |
 | Phenocopy rate           | 0.20           | 0.10            |
 
-\vspace{0.3cm}
-
 **Why test multiple models?**
 
--   True inheritance pattern unknown for complex diseases
+-   True inheritance pattern is unknown for complex diseases
 -   Maximizing over models increases power but also Type I error
 
 ## Background Concept: LOD Score
@@ -215,7 +213,7 @@ $$LOD(\theta) = \log_{10} \frac{L(\theta)}{L(\theta = 0.5)} = \log_{10} \frac{\t
 
 \vspace{0.3cm}
 
-**When penetrance** $f < 1$ or phenocopy rate $f_0 > 0$, the likelihood:
+When penetrance $f < 1$ or phenocopy rate $f_0 > 0$, the likelihood:
 
 $$L(\theta) = \sum_{\text{genotypes}} P(\text{phenotypes} | \text{genotypes}, f, f_0) \cdot P(\text{genotypes} | \theta)$$
 
@@ -231,8 +229,6 @@ $$P(Y_i | G_i) = \begin{cases} f^{Y_i}(1-f)^{1-Y_i} & \text{if } G_i = \text{car
 -   **Three-point (multipoint):** Uses flanking markers together
     -   More informative, extracts more information
     -   Each marker included in two three-point analyses
-
-\vspace{0.3cm}
 
 **Mod Score Approach:**
 
@@ -251,8 +247,6 @@ $$P(Y_i | G_i) = \begin{cases} f^{Y_i}(1-f)^{1-Y_i} & \text{if } G_i = \text{car
 -   607 markers $\times$ 3 phenotypes $\times$ 8 model combinations = many tests!
 -   High risk of false positives
 
-\vspace{0.3cm}
-
 **Solution: Lander & Kruglyak (1995) Thresholds**
 
 | Category         | Z-score    | Interpretation                          |
@@ -260,8 +254,6 @@ $$P(Y_i | G_i) = \begin{cases} f^{Y_i}(1-f)^{1-Y_i} & \text{if } G_i = \text{car
 | **Significant**  | $\geq$ 4.0 | Genomewide significant (p \< 0.05)      |
 | **Suggestive**   | $\geq$ 2.6 | Expected once per genome scan by chance |
 | **Confirmatory** | $\geq$ 1.9 | Only in regions with prior evidence     |
-
-\vspace{0.3cm}
 
 **Additional correction in this study:**
 
@@ -287,11 +279,9 @@ $$P(Y_i | G_i) = \begin{cases} f^{Y_i}(1-f)^{1-Y_i} & \text{if } G_i = \text{car
 -   Calculates HLOD (heterogeneity LOD)
 -   Applied to signals with mod score \> 1.9
 
-\vspace{0.3cm}
-
 $$HLOD = \log_{10} \left[ \alpha \cdot L(\theta) + (1-\alpha) \cdot L(\theta=0.5) \right] - \log_{10} L(\theta=0.5)$$
 
-# Part III: Results
+# Part III: Results & Figures
 
 ## Genetic Nomenclature: Loci and Markers
 
