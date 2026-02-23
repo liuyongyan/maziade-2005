@@ -119,20 +119,10 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 ```         
 Step 1: Define phenotypes (who is "affected"?)
-           |
-           v
 Step 2: Genotype families using microsatellite markers
-           |
-           v
 Step 3: Perform model-based linkage analysis
-           |
-           v
 Step 4: Calculate LOD scores across genome
-           |
-           v
 Step 5: Apply significance thresholds (multiple testing)
-           |
-           v
 Step 6: Identify candidate susceptibility regions
 ```
 
@@ -166,15 +156,11 @@ Step 6: Identify candidate susceptibility regions
 -   Highly polymorphic: many different alleles in population
 -   Scattered throughout the genome
 
-\vspace{0.3cm}
-
-**Why use microsatellites for linkage analysis? (class: how is it better than snp)**
+**Why use microsatellites for linkage analysis?**
 
 -   High heterozygosity $\rightarrow$ more **informative meioses**
 -   A pedigree contributes to LOD score only if key individuals are heterozygous
 -   More alleles = better ability to track inheritance
-
-\vspace{0.3cm}
 
 **This study used:**
 
@@ -194,8 +180,6 @@ do we need to talk about actual genotypying - PCR etc
 | **BP** | BP I only (N=48) | BP I + BP II + recurrent depression (N=72) |
 | **CL** | SZ + BP I + schizoaffective (N=134) | CL narrow + depression + schizotypal (N=169) |
 
-\vspace{0.3cm}
-
 **CL = "Common Locus" phenotype**
 
 -   Tests hypothesis that some loci are shared by both disorders
@@ -211,9 +195,7 @@ do we need to talk about actual genotypying - PCR etc
 2.  **Disease allele frequency:** How common is the risk allele?
 3.  **Penetrance:** P(affected \| genotype)
 
-\vspace{0.3cm}
-
-**Two models used in this study: - why these number - 0.07%prevalence; ask class?**
+**Two models used in this study:**
 
 | Parameter                | Dominant Model | Recessive Model |
 |--------------------------|----------------|-----------------|
@@ -236,18 +218,13 @@ $$LOD(\theta) = \log_{10} \frac{L(\theta)}{L(\theta = 0.5)} = \log_{10} \frac{\t
 
 \vspace{0.3cm}
 
-**Interpretation:**
+**When penetrance $f < 1$ or phenocopy rate $f_0 > 0$, the likelihood:**
 
--   LOD = 0: No evidence either way
--   LOD = 1: Data 10x more likely under linkage
--   LOD = 2: Data 100x more likely under linkage
--   **LOD = 3: Traditional threshold for "significant" linkage**
+$$L(\theta) = \sum_{\text{genotypes}} P(\text{phenotypes} | \text{genotypes}, f, f_0) \cdot P(\text{genotypes} | \theta)$$
 
-\vspace{0.3cm}
+where for each individual $i$: $P(\text{phenotypes} | \text{genotypes}, f, f_0) = \prod_{i} P(Y_i | G_i)$
 
-**LOD scores are additive across families:**
-
-$$LOD_{total} = \sum_{i=1}^{n} LOD_i$$
+$$P(Y_i | G_i) = \begin{cases} f^{Y_i}(1-f)^{1-Y_i} & \text{if } G_i = \text{carrier} \\ f_0^{Y_i}(1-f_0)^{1-Y_i} & \text{if } G_i = \text{non-carrier} \end{cases}$$
 
 ## Methods Step 3: Linkage Analysis Details
 
@@ -268,7 +245,7 @@ $$LOD_{total} = \sum_{i=1}^{n} LOD_i$$
 
 \vspace{0.3cm}
 
-**Software:** FASTLINK (version of LINKAGE) - what it is
+**Software:** FASTLINK (version of LINKAGE)
 
 ## Methods Step 4: Multiple Testing Correction
 
