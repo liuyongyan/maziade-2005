@@ -35,7 +35,7 @@ header-includes:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
-# Part I: Background & Study Design
+# Part I: Background & Study Pedigrees
 
 ## Study Objective
 
@@ -62,42 +62,27 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 -   Mood disorder with manic and depressive episodes
 -   Life time prevalence of 0.6%; Bipolar spectrum disorders: 1-2%
--   Highly heritable (60-85%)
+-   **Highly heritable (60-85%)**
 -   \~70% reported psychotic symptoms
 
 **Schizophrenia (SZ):**
 
 -   Key features include hallucinations, delusions, disorganized speech, abnormal motor behavior, diminished emotional expression
 -   Lifetime prevalence in population is 0.3-0.7%
--   High heritability (70-80%)
+-   **High heritability (70-80%)**
 -   **Schizoaffective Disorder:**
     -   Schizophrenia with mood symptoms (mania and/or depression)
     -   lifetime prevalence is \~0.3%
 
 ## **Complex Genetic Disorders**
 
--   Non-Mendelian inheritance - class: what if it is Mendelian inheritance
-
-    -   monozygotic twin concordance rate is 40-50%
-
+-   Non-Mendelian inheritance with incomplete penetrance
+    -   carrying a susceptibility allele does not guarantee disease expression
 -   Genetic heterogeneity
-
-    -   different loci / different mutation
-
--   Polygenic
-
-    -   multiple genes likely involved within individuals
-
--   Incomplete penetrance
-
-    -   gene-environment interaction
-
+    -   similar clinical phenotypes may result from different susceptibility loci or mutations across families
 -   Phenocopies
-
     -   similar clinical phenotype induced by enviromental factors
-
     -   eg., prenatal or perinatal adversities including stress, infection, or other medical complications
-
 -   Other risk factors: neurodevelopmental factors, substance exposure, psychosocial stressors, etc.
 
 ## Study Population: Eastern Quebec Families
@@ -111,7 +96,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 \vspace{0.3cm}
 
-**Family Selection Criteria: - class: why the criteria**
+**Family Selection Criteria:**
 
 -   At least one first-degree relative with same disorder as proband
 -   At least two additional affected relatives (first/second/third-degree)
@@ -179,17 +164,15 @@ Step 6: Identify candidate susceptibility regions
 **This study used:**
 
 -   607 microsatellite markers
--   350 markers at 10 cM resolution (initial scan) - \*a marker for every 10 centimorgan
+-   350 markers at 10cM resolution (initial scan)
 -   257 additional markers in promising regions
-
-do we need to talk about actual genotypying - PCR etc
 
 ## Methods Step 1: Phenotype Definitions
 
 **Three diagnostic classes analyzed:**
 
 | Phenotype | Narrow Definition | Broad Definition |
-|----|----|----|
+|-------------------|---------------------------|--------------------------|
 | **SZ** | SZ only (N=71) | SZ + schizophreniform + schizotypal (N=81) |
 | **BP** | BP I only (N=48) | BP I + BP II + recurrent depression (N=72) |
 | **CL** | SZ + BP I + schizoaffective (N=134) | CL narrow + depression + schizotypal (N=169) |
