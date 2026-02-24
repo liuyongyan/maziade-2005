@@ -116,13 +116,12 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 **Overall Analytical Strategy:**
 
-```         
-Step 1: Define phenotypes (who is "affected"?)
-Step 2: Genotype families using microsatellite markers
-Step 3: Perform model-based linkage analysis
-Step 4: Calculate LOD scores across genome
-Step 5: Apply significance thresholds (multiple testing)
-Step 6: Identify candidate susceptibility regions
+```
+Step 1: Define phenotypes
+Step 2: Specify transmission models
+Step 3: Perform linkage analysis with Mod Score approach
+Step 4: Apply multiple testing correction
+Step 5: Conduct heterogeneity analysis
 ```
 
 ## Background Concept: What is Linkage?
@@ -151,13 +150,13 @@ Step 6: Identify candidate susceptibility regions
 
 **What are microsatellites?**
 
--   Short tandem repeats (STRs) of 2-4 nucleotides (e.g., CA-CA-CA-CA, or CA-CA, etc.)
--   Highly polymorphic: many different alleles in population
+-   Known positions
 -   Scattered throughout the genome
 
 **Why use microsatellites for linkage analysis?**
 
 -   High heterozygosity $\rightarrow$ more **informative meioses**
+-   Short tandem repeats (STRs) of 2-4 nucleotides (e.g., CA-CA-CA-CA, or CA-CA, etc.)
 -   A pedigree contributes to LOD score only if key individuals are heterozygous
 -   More alleles = better ability to track inheritance
 
@@ -181,8 +180,6 @@ Step 6: Identify candidate susceptibility regions
 
 -   Combines SZ and BP phenotypes
 -   Tests hypothesis that some loci are shared by both disorders
-
-**Diagnostic blindness**: ensures that clinical diagnosis is assigned independently of family structure
 
 ## Methods Step 2: Transmission Models
 
