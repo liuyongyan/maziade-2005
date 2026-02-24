@@ -139,7 +139,7 @@ Step 5: Conduct heterogeneity analysis
 
 \vspace{0.3cm}
 
-**Recombination Fraction (**$\theta$):
+**Recombination Fraction (**$\theta$**)**:
 
 -   $\theta$ = probability of recombination between two loci
 -   $\theta = 0.5$: loci are unlinked (different chromosomes or far apart)
