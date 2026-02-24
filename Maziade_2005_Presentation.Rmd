@@ -61,7 +61,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 **Bipolar I Disorder (BP):**
 
 -   Mood disorder with manic and depressive episodes
--   Life time prevalence of 0.6%; Bipolar spectrum disorders: 1-2%
+-   Lifetime prevalence of 0.6%; Bipolar spectrum disorders: 1-2%
 -   **Highly heritable (60-85%)**
 -   \~70% reported psychotic symptoms
 
