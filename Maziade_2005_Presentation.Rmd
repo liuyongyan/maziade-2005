@@ -285,40 +285,34 @@ $$HLOD = \log_{10} \left[ \alpha \cdot L(\theta) + (1-\alpha) \cdot L(\theta=0.5
 
 ## Genetic Nomenclature: Loci and Markers
 
--   **1. Chromosomal Location (e.g., 2q12.3)**
-    -   **2**: The chromosome number.
+-   **Chromosomal Location** (e.g., 15q11.1)
+    -   **15**: the chromosome number
 
-    -   **q**: The "long arm" of the chromosome (p stands for the "short arm").
+    -   **q**: the "long arm" of the chromosome (p stands for the "short arm")
 
-    -   **12.3**: The specific band and sub-band on that arm. Numbers increase as you move further from the centromere (the center).
+    -   **11.1**: the specific band and sub-band on that arm, numbered in increasing order as the distance from the centromere (the center) increases
+-   **Genetic Markers** (e.g., D15S122)
+    -   **D**: DNA
 
-<!-- -->
+    -   **15**: located on Chromosome 15
 
--   **2. Genetic Markers (e.g., D15S122)**
+    -   **S**: a single-copy sequence (a unique genomic locus)
 
-    -   **D**: DNA.
-
-    -   **15**: Located on Chromosome 15.
-
-    -   **S**: A "single-copy" sequence (a unique landmark in the genome).
-
-    -   **122**: The registration number for that specific marker.
-
+    -   **122**: the unique ID number for this specific marker
 -   **The Relationship**:
+    -   **15q11.1** defines a broad chromosomal region
 
-    -   Think of **2q12.3** as a **neighborhood** (a general region).
+    -   **D15S122** is a precise genetic marker within that region, used to test linkage to a nearby disease locus
 
-    -   Think of **D15S122** as a **specific street address** (a precise landmark) used by researchers to verify if a disease gene is nearby.
+## Results (see Table 1)
 
-## Results summarized in Table 1
-
--   **Significant Linkage Findings (MOD Score \> 4.0)**:
+-   **Significant Linkage Findings** (MOD Score $\geq$ 4.0):
 
     -   **BP**: 15q11.1 (D15S122), 18q12.3 (D18S1145), 16p12.3 (D16S410)
 
     -   **CL**: 15q26 (D15S1014), 18q21.1 (D18S472)
 
--   **Suggestive Linkage Findings (MOD Score \> 2.6)**:
+-   **Suggestive Linkage Findings** (MOD Score $\geq$ 2.6):
 
     -   **BP**: 12q23.1 (D12S1030), 3q21.2 (D3S3023), 10p13 (D10S674)
 
@@ -328,39 +322,43 @@ $$HLOD = \log_{10} \left[ \alpha \cdot L(\theta) + (1-\alpha) \cdot L(\theta=0.5
 
 -   **Novelty and Replication** (see Table 3):
 
-    -   **Novel Discovery**: The linkage signal at **15q26** for the shared phenotype appeared to be a novel finding.
+    -   **Novel Discovery**: the linkage signal at **15q26** for the shared phenotype
 
-    -   **Confirmatory Evidence**: The finding at **6p22.3** for SZ (MOD score \>= 1.9) aligns with previously reported genome-wide significant findings, reinforcing its importance.
+    -   **Confirmatory Evidence** (MOD score $\geq$ 1.9): the finding at **3q21.2** for BP, **6p22.3** for SZ, **10p15-p11** for BP and SZ, **18q12.3-q32** for BP and SZ, etc.
 
--   Findings were not driven by just one or two families. Instead, the genetic signal is distributed across multiple pedigrees (see Table 2)
+## Table 2: Family Contributions to the Genetic Signal
+
+-   The linkage signal is supported by several pedigrees rather than driven by a single influential family
+
+```{r, echo=FALSE, out.width="88%", fig.align="center"}
+knitr::include_graphics("table_2.png")
+```
 
 ## Figure 1: Visualizing Linkage across Chromosomes
 
--   **X-axis**: Represents the physical distance along the chromosome (measured in cM).
+-   **X-axis**: physical distance along the chromosome (measured in cM)
 
--   **Y-axis**: Represents the MOD Score (the strength of the evidence).
+-   **Y-axis**: MOD score (the strength of the evidence)
 
--   **Example**: Chromosome 18 shows overlapping linkage peaks for SZ, BP and the combined phenotype, suggesting a shared psychosis susceptibility locus rather than diagnosis-specific genes.
+-   **Example**: Chromosome 18 shows overlapping linkage peaks for SZ, BP and the combined phenotype, suggesting a shared susceptibility locus rather than diagnosis-specific genes
 
-```{r, echo=FALSE, out.width="80%", fig.align="center"}
-# knitr::include_graphics("ch18_peak.png")
+```{r, echo=FALSE, out.width="82%", fig.align="center"}
+knitr::include_graphics("ch18_peak.png")
 ```
 
-# Part IV: Discussion Questions
+# Part IV: Discussion
 
 ## **Evidence for Shared Loci Between SZ and BP**
 
--   Data indicates overlapping susceptibility regions, suggesting that SZ and BP may share a common biological etiology in specific areas.
-
-<!-- -->
+-   Data indicates overlapping susceptibility regions, suggesting that SZ and BP may share a common biological etiology in specific areas
 
 -   **Key Shared Hotspots**:
 
-    -   **Chromosome 18 (18q12-q21)**: This region showed consistent significant or suggestive linkage across SZ, BP, and combined phenotypes.
+    -   **Chromosome 18q**: showed consistent significant or suggestive linkage across SZ, BP, and combined phenotypes
 
-    -   **Chromosome 15 (15q26)**: Evidence suggests the presence of one or more susceptibility genes contributing to either or both disorders.
+    -   **Chromosome 15q**: suggested the presence of one or more susceptibility genes contributing to either or both disorders
 
-<!-- -->
+    -   **Chromosome 16p**: primarily driven by BP and the shared phenotype, indicating a potential shared susceptibility locus; absence of a signal for SZ likely reflects diagnostic misclassification within pedigrees
 
 -   These results strongly support the hypothesis that some genetic risk factors are **not specific to one diagnosis** but are shared across the spectrum of these two major psychoses
 
@@ -368,70 +366,47 @@ $$HLOD = \log_{10} \left[ \alpha \cdot L(\theta) + (1-\alpha) \cdot L(\theta=0.5
 
 **1. Statistical Thresholds**
 
--   Unclear if these criteria fit a small number of large families.
--   The effect of a two-step scan (sparse then dense) is hard to simulate.
+-   Unclear if these criteria fit a small number of large families
+-   The effect of a two-step scan (sparse then dense) is hard to simulate
 
-<!-- -->
+\vspace{0.3cm}
 
 **2. Sensitivity of Heterogeneity**
 
--   Current tests may fail to detect between-family heterogeneity (different families having different genetic causes).
+-   Current tests may fail to detect between-family heterogeneity
 
-<!-- -->
+\vspace{0.3cm}
 
 **3. Complexity of Replication**
 
--   Difficult to define "true replication" across different studies due to variations in:
+-   Difficult to define "true replication" across studies due to variations in:
 
     -   Sampling & Diagnostics
     -   Statistical methods & Genetic markers
 
 ## Implications & Future Direction
 
--   **Proposed Genetic Architecture Models**
+-   **Combination Model**: SZ and BP specificity arises from unique combinations of multiple shared genes
 
-    -   **Combination Model**: Disease specificity (SZ vs. BP) arises from unique combinations of multiple shared genes.
+-   **Modifier Gene Model**: SZ and BP share core genes, and specific modifier genes determine the final clinical phenotype
 
-    -   **Modifier Gene Model**: SZ and BP share core genes; specific modifier genes determine the final clinical phenotype.
+    -   **Necessary but Not Sufficient**: Genes at loci like **6p22 (SZ)** or **16p12 (BP)** require interactions with other genes to trigger the disorder
 
--   **Evidence for Complex Inheritance**
+    -   **Affected-Only *vs*** **Affect/Unaffected**: More significant signals in AO analysis compared to AU
 
-    -   **Necessary but Not Sufficient**: Genes at loci like **6p22 (SZ)** or **16p12 (BP)** require interactions with other genes to trigger the disorder.
+-   **Future Directions**
 
-    -   **Affected-Only (AO) Evidence**: Significant signals in AO analysis suggest incomplete penetrance (healthy members also carrying the gene).
-
-    -   The presence of multiple signals in one sample allows for the study of gene-gene interactions (epistases).
-
--   **Future Direction**
-
-    -   Expand statistical power using a second sample of 500 members, ultimately identifying defective genes and paving the way for new treatments.
+    -   The presence of multiple signals in one sample may allow for the study of gene-gene interactions (epistases)
+    -   Expand statistical power using a second sample of 500 members, ultimately identifying defective genes and paving the way for new treatments
 
 ## Questions for Class Discussion
 
-**Conceptual Questions:**
-
 1.  Why did the authors use **model-based** (parametric) linkage analysis instead of model-free methods for this study? What are the trade-offs?
 
-2.  The study found that some chromosomal regions showed linkage signals for the **combined phenotype (CL)** but not for SZ or BP alone. What does this suggest about the genetic architecture of these disorders?
+2.  The authors used both **narrow and broad** phenotype definitions. How might the phenotype definitions affect LOD scores and power?
 
-\vspace{0.3cm}
+3.  We learned that LOD scores require specifying **penetrance** values. This study used age-dependent penetrance. Why is this important for late-onset disorders?
 
-**Methodological Questions:**
+4.  The maximum family LOD score was only \~2.0 (Table 2), yet the combined scores reached significance. What does this tell us about **genetic heterogeneity** of these disorders?
 
-3.  How does the **multiple testing problem** manifest in this study? Do you think the Lander & Kruglyak thresholds adequately address all sources of multiple testing?
-
-4.  The authors used both **narrow and broad** phenotype definitions. How might phenotype misclassification affect LOD scores and power?
-
-## Questions for Class Discussion (cont.)
-
-**Connecting to Course Material:**
-
-5.  In Lecture 4, we learned that LOD scores require specifying **penetrance** values. This study used age-dependent penetrance. Why is this important for late-onset disorders?
-
-6.  The maximum family LOD score was only \~2.0 (Table 2), yet the combined scores reached significance. What does this tell us about **genetic heterogeneity** and the **oligogenic** nature of these disorders?
-
-\vspace{0.3cm}
-
-**Critical Thinking:**
-
-7.  This is a **two-stage design** (initial sparse scan + dense follow-up). What are the advantages of this approach compared to performing dense genotyping from the start?
+5.  This is a **two-stage design** (initial sparse scan + dense follow-up). What are the advantages of this approach compared to performing dense genotyping from the start?
