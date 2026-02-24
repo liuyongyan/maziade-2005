@@ -45,8 +45,8 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 **Key Questions:**
 
--   Do SZ and BP **share** common genetic susceptibility loci?
--   Are there loci **specific** to each disorder?
+-   Do SZ and BP **share** common genetic susceptibility alleles?
+-   Are there alleles **specific** to each disorder?
 
 \vspace{0.3cm}
 
@@ -54,6 +54,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 -   Family studies show co-aggregation of SZ and BP within pedigrees
 -   Previous linkage studies analyzed the disorders separately
+-   Liddle: look at symptom dimensions rather than disease categories
 -   Separate analysis may cause diagnostic misclassification to break segregation patterns within pedigrees
 
 ## Background: The Diseases
@@ -74,12 +75,14 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
     -   Schizophrenia with mood symptoms (mania and/or depression)
     -   lifetime prevalence is \~0.3%
 
+**Diagnostic blindness:** ensures that clinical diagnosis is assigned independently of family structure
+
 ## **Complex Disorders**
 
 -   Non-Mendelian inheritance with incomplete penetrance
     -   Carrying a susceptibility allele does not guarantee disease expression
 -   Genetic heterogeneity
-    -   Similar clinical phenotypes may result from different susceptibility loci or mutations across families
+    -   Similar clinical phenotypes may result from different susceptibility allele or mutations across families
 -   Phenocopies
     -   Similar clinical phenotype induced by enviromental factors
     -   Eg., prenatal or perinatal adversities including stress, infection, or other medical complications
@@ -116,7 +119,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 **Overall Analytical Strategy:**
 
-```
+```         
 Step 1: Define phenotypes
 Step 2: Specify transmission models
 Step 3: Perform linkage analysis with Mod Score approach
@@ -370,7 +373,7 @@ knitr::include_graphics("ch18_peak.png")
 
 **2. Sensitivity of Heterogeneity**
 
--   Current tests may fail to detect between-family heterogeneity
+-   Current tests may fail to detect between-family heterogeneity due to small number of families
 
 \vspace{0.3cm}
 
