@@ -74,7 +74,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
     -   Schizophrenia with mood symptoms (mania and/or depression)
     -   lifetime prevalence is \~0.3%
 
-## **Complex Genetic Disorders**
+## **Complex Disorders**
 
 -   Non-Mendelian inheritance with incomplete penetrance
     -   Carrying a susceptibility allele does not guarantee disease expression
